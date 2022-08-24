@@ -1,0 +1,14 @@
+.container{
+    background-color: #000000;
+    padding-bottom: 1.5rem;
+}
+.heading{
+background-color: #ff0000;
+color:#ffffff;
+padding-bottom: 1rem;
+}
+.headerlogo {
+    display: block;
+    position: relative;
+    margin: 0;
+}
