@@ -1,0 +1,20 @@
+.container{
+    align-content: center;
+    width: 30%;
+    /* border: 1px solid red; */
+    margin: auto;
+    padding-top: 6rem;
+    padding-bottom: 8rem;
+}
+.input{
+    width: 300px;
+    height: 40px;
+    padding-left: 1rem;
+    border: 1px #4299e1;
+}
+button{
+    cursor: pointer;
+    width:150px;
+    height: 40px;
+    margin-left: 5rem;
+}
