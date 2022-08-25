@@ -32,7 +32,7 @@ const Login = () => {
         alert("success");
         // console.log(res);
         auth.handleLogin(res.token);
-        navigate("/");
+        navigate("/dailydeals");
       })
       .catch((err) => {});
   }
@@ -70,13 +70,13 @@ const Login = () => {
           <Box>
             <Button
               className={styles.button}
-              background={"#4299e1"}
-              color={"#fff"}
+              background={"#fe161f"}
+              color={"#ffffff"}
               textTransform="uppercase"
               type="submit"
               value="Sign In"
             >
-                Sign In
+                Login
             </Button>
           </Box>
           <Box>
