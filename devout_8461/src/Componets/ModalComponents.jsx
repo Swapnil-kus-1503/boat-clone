@@ -49,10 +49,10 @@ import {
             <ModalBody>
               <Img boxSize="20rem" src={products.image} />
               <Text> {products.name} </Text>
-              <Text> {products.rating} </Text>
-              <Text> {`₹ ${products.stkPrice}`}</Text>
-              <Text> {`₹ ${products.price}`} </Text>
-              <Text> {products.off} </Text>
+              <Text>Rating : {products.rating} </Text>
+              <Text textDecoration={"line-through"}> Original Price: {`₹ ${products.stkPrice}`}</Text>
+              <Text> Special Price: {`₹ ${products.price}`} </Text>
+              <Text>OFF: {products.off} </Text>
             </ModalBody>
   
             <ModalFooter>

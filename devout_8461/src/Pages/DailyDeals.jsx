@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  Container,
   Img,
   SimpleGrid,
   Stack,
@@ -17,11 +16,31 @@ const DailyDeals = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [page, setPage] = useState(Number(searchParams.get("page")) || 1);
   const [products, setProducts] = useState([]);
+  const [cartProducts, setCartProducts] = useState([]);
   const [sortBy, setSortBy] = useState("asc");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedBBox, setSelectedBox] = useState({});
+
+  const handleAddCart = () => {
+    fetch(`http://localhost:8080/cart/`, {
+      method: "POST",
+      headers: {
+        "content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        data:cartProducts,
+      }),
+  
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        //   console.log(data);
+        setProducts([...products, res]);
+        setCartProducts(res.data);
+      });
+  };
 
   useEffect(() => {
     setError(false);
@@ -95,15 +114,28 @@ const DailyDeals = () => {
         spacing={"5rem"}
       >
         {products.map((item) => (
-          <Box onClick={() => handleDetails(item)}>
+          <Box>
             <Stack
               style={{ boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}
               className={styles.containerStack}
             >
-              <Img boxSize={"250px"} src={item.image} alignContent={"center"} />
-              <Text>{item.name}</Text>
-              <Text>{item.category}</Text>
-              <Text>{`₹ ${item.price}`}</Text>
+              <Stack onClick={() => handleDetails(item)}>
+                <Img
+                  boxSize={"200px"}
+                  src={item.image}
+                  alignContent={"center"}
+                />
+                <Text>{item.name}</Text>
+                <Text>{item.category}</Text>
+                <Text>{`₹ ${item.price}`}</Text>
+              </Stack>
+              <Button
+                onClick={handleAddCart}
+                background={"#fe161f"}
+                className={styles.addToCart}
+              >
+                ADD TO CART
+              </Button>
             </Stack>
           </Box>
         ))}

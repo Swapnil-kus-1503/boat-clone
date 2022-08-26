@@ -1,0 +1,11 @@
+.container{
+    background-color: #252525;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    }
+    .containerStack{
+        background-color: #e3e3e3;
+        border-radius: 2rem;
+        font-size: 1.3rem;
+        padding-bottom: 1rem;
+    }
