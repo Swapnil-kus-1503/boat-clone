@@ -7,11 +7,16 @@ padding-bottom: 3rem;
     background-color: #e3e3e3;
     border-radius: 2rem;
     font-size: 1.3rem;
+    padding-bottom: 1rem;
 }
 
 .buttonBox{
     padding-top: 1rem;
     color: #ffffff;
-
     background-color: #252525;
+}
+.addToCart{
+margin-left: -5px;
+color: #ffffff;
+display: block;
 }
