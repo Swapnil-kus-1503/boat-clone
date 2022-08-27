@@ -58,7 +58,7 @@ const Cart = () => {
         spacing={"5rem"}
       >
         {cartProducts.map((item) => (
-          <Box>
+          <Box id={item.id}>
             <Stack
               style={{ boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}
               className={styles.containerStack}
