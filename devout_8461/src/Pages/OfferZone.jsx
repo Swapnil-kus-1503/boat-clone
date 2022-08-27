@@ -48,7 +48,7 @@ const OfferZone = () => {
     setError(false);
     setLoading(true);
     axios({
-      url: `http://localhost:8080/products?_page=${page}&_limit=8&_sort=rating&_order=${sortBy}`,
+      url: `http://localhost:8080/products?_page=${page}&_limit=8&_sort=off&_order=${sortBy}`,
     })
       .then((res) => {
         setLoading(false);
@@ -99,14 +99,14 @@ const OfferZone = () => {
           onClick={() => setSortBy("asc")}
           disabled={sortBy === "asc"}
         >
-          Low To High
+          Min To Max
         </Button>{" "}
         <Button
           background={"#fe161f"}
           onClick={() => setSortBy("desc")}
           disabled={sortBy === "desc"}
         >
-          High To Low
+          Max To Min
         </Button>
       </div>
 
