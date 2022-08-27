@@ -322,5 +322,96 @@
     }
   ],
   "cart": [
+    {
+      "data": {
+        "id": 646848,
+        "image": "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/103_360x.png?v=1574927262",
+        "off": " you save 70%",
+        "rating": " 5 star ",
+        "name": "boAt BassHead 103",
+        "price": 379,
+        "stkPrice": 1290,
+        "category": "wired earphones"
+      },
+      "id": 2
+    },
+    {
+      "data": {
+        "id": 489485,
+        "image": "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/553af994-244a-4b81-9d9e-9967a1b966b3_360x.png?v=1625046259",
+        "off": " you save 60%",
+        "rating": " 5 star ",
+        "name": "boAt BassHeads",
+        "price": 399,
+        "stkPrice": 999,
+        "category": "wired earphones"
+      },
+      "id": 3
+    },
+    {
+      "data": {
+        "id": 489489,
+        "image": "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/8ec58553-3255-48ec-929e-4838215b640c_360x.png?v=1625046271",
+        "off": " you save 67%",
+        "rating": " 5 star ",
+        "name": "boAt BassHeads 900",
+        "price": 799,
+        "stkPrice": 2499,
+        "category": "wired headphones"
+      },
+      "id": 4
+    },
+    {
+      "data": {
+        "id": 6548948,
+        "image": "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/8ec58553-3255-48ec-929e-4838215b640c_360x.png?v=1625046271",
+        "off": " you save 67%",
+        "rating": " 5 star ",
+        "name": "boAt BassHeads 900",
+        "price": 799,
+        "stkPrice": 2499,
+        "category": "wired headphones"
+      },
+      "id": 5
+    },
+    {
+      "data": {
+        "id": 878978,
+        "image": " https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_541e4150-6924-467d-b193-1793daa2e283_360x.png?v=1648119560",
+        "off": "  NEW-ARRIVAL",
+        "rating": " 5 star ",
+        "name": "boAt  Deuce 500",
+        "price": 499,
+        "stkPrice": 899,
+        "category": "cable"
+      },
+      "id": 6
+    },
+    {
+      "data": {
+        "id": 489489,
+        "image": "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/8ec58553-3255-48ec-929e-4838215b640c_360x.png?v=1625046271",
+        "off": " you save 67%",
+        "rating": " 5 star ",
+        "name": "boAt BassHeads 900",
+        "price": 799,
+        "stkPrice": 2499,
+        "category": "wired headphones"
+      },
+      "id": 7
+    },
+    {
+      "data": {
+        "id": 6548948,
+        "image": "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/8ec58553-3255-48ec-929e-4838215b640c_360x.png?v=1625046271",
+        "off": " you save 67%",
+        "rating": " 5 star ",
+        "name": "boAt BassHeads 900",
+        "price": 799,
+        "stkPrice": 2499,
+        "category": "wired headphones"
+      },
+      "id": 8
+    }
   ]
 }
