@@ -1,52 +1,54 @@
-import {
-  Box,
-  Button,
-  Img,
-  SimpleGrid,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Button, Img, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { ModalComponent } from "../Componets/ModalComponents";
 import styles from "../Styles/DailyDeals.module.css";
 
+const getCart = () => {
+  return fetch(`http://localhost:8080/cart/`, {}).then((res) => res.json());
+};
+
 const OfferZone = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [page, setPage] = useState(Number(searchParams.get("page")) || 1);
   const [products, setProducts] = useState([]);
-  const [cartProducts, setCartProducts] = useState([]);
+  const [cartProducts, setCartProducts] = useState({});
   const [sortBy, setSortBy] = useState("asc");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedBBox, setSelectedBox] = useState({});
 
-  const handleAddCart = () => {
+  useEffect(() => {
+    getCart().then((res) => {
+      console.log(res);
+      setCartProducts(res);
+    });
+  }, []);
+
+  const addToCart = (data) => {
     fetch(`http://localhost:8080/cart/`, {
       method: "POST",
       headers: {
-        "content-Type": "application/json",
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        data:cartProducts,
-      }),
-  
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        //   console.log(data);
-        setProducts([...products, res]);
-        setCartProducts(res.data);
-      });
+      body: JSON.stringify(data),
+    });
+  };
+
+  const handleAddCart = (products) => {
+    alert("success");
+    addToCart(products).then((res) => {
+      console.log(res);
+    });
   };
 
   useEffect(() => {
     setError(false);
     setLoading(true);
     axios({
-      url: `http://localhost:8080/products?_page=${page}&_limit=8&_sort=off&_order=${sortBy}`,
+      url: `http://localhost:8080/products?_page=${page}&_limit=8&_sort=rating&_order=${sortBy}`,
     })
       .then((res) => {
         setLoading(false);
@@ -130,7 +132,7 @@ const OfferZone = () => {
                 <Text>{item.off}</Text>
               </Stack>
               <Button
-                onClick={handleAddCart}
+                onClick={() => handleAddCart(item)}
                 background={"#fe161f"}
                 className={styles.addToCart}
               >

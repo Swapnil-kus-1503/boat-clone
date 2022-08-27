@@ -24,13 +24,12 @@ const Cart = () => {
   useEffect(() => {
     setError(false);
     setLoading(true);
-    axios({
-      url: `http://localhost:8080/cart`,
-    })
+    axios.get(`http://localhost:8080/cart`)
       .then((res) => {
         setLoading(false);
-        console.log(res.data);
-        setCartProducts(res.data);
+      
+        console.log(res);
+        setCartProducts([...res.data]);
       })
       .catch((err) => {
         setLoading(false);
@@ -57,7 +56,7 @@ const Cart = () => {
         columns={[1, 2, 2, 4]}
         spacing={"5rem"}
       >
-        {cartProducts.map((item) => (
+        {cartProducts && cartProducts.map((item) => (
           <Box id={item.id}>
             <Stack
               style={{ boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}

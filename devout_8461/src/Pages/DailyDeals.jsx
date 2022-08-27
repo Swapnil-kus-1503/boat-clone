@@ -34,14 +34,12 @@ const DailyDeals = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    }).then((res) => res.json());
+    });
   };
 
   const handleAddCart = (products) => {
-    const item = {
-      data: products,
-    };
-    addToCart(item).then((res) => {
+    alert("success");
+    addToCart(products).then((res) => {
       console.log(res);
     });
   };
