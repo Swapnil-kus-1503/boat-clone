@@ -3,9 +3,15 @@
     padding-top: 3rem;
     padding-bottom: 3rem;
     }
-    .containerStack{
+.containerStack{
         background-color: #e3e3e3;
         border-radius: 2rem;
         font-size: 1.3rem;
         padding-bottom: 1rem;
     }
+
+.remove{
+        margin-left: -5px;
+        color: #ffffff;
+        display: block;
+        }  
