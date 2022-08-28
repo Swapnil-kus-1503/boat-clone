@@ -10,6 +10,7 @@ import {
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
+import Footer from "../Componets/Footer";
 import styles from "../Styles/Cart.module.css";
 
 const Cart = () => {
@@ -119,6 +120,7 @@ const Cart = () => {
           </Button>
         </Link>
       </Container>
+      <Footer/>
     </div>
   );
 };

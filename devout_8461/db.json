@@ -321,16 +321,5 @@
       "category": "wireless earphones"
     }
   ],
-  "cart": [
-    {
-      "id": 489485,
-      "image": "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/553af994-244a-4b81-9d9e-9967a1b966b3_360x.png?v=1625046259",
-      "off": " you save 60%",
-      "rating": " 5 star ",
-      "name": "boAt BassHeads",
-      "price": 399,
-      "stkPrice": 999,
-      "category": "wired earphones"
-    }
-  ]
+  "cart": []
 }
