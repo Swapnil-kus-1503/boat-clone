@@ -1,6 +1,7 @@
 import { Box, Button, Flex } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Footer from "../Componets/Footer";
 import styles from "../Styles/Login.module.css";
 
 const Checkout = () => {
@@ -91,6 +92,7 @@ const Checkout = () => {
           </form>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

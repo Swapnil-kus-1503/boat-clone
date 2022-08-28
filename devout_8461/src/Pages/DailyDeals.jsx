@@ -2,6 +2,7 @@ import { Box, Button, Img, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import Footer from "../Componets/Footer";
 import { ModalComponent } from "../Componets/ModalComponents";
 import styles from "../Styles/DailyDeals.module.css";
 
@@ -147,6 +148,7 @@ const DailyDeals = () => {
           products={selectedBBox}
         />
       </SimpleGrid>
+      <Footer/>
     </div>
   );
 };

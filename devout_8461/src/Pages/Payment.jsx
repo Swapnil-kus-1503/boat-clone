@@ -1,6 +1,7 @@
 import { Box, Button, Flex, Spacer, Text } from "@chakra-ui/react";
 import React, { useContext, useState } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
+import Footer from "../Componets/Footer";
 import { AuthContext } from "../Context/AuthContext";
 import styles from "../Styles/Login.module.css";
 
@@ -114,6 +115,7 @@ const Payment = () => {
           </Flex>
         </form>
       </div>
+      <Footer/>
     </div>
   );
 };
