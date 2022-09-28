@@ -321,5 +321,16 @@
       "category": "wireless earphones"
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": 654,
+      "image": "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_9230f72d-9f86-4aec-9ae2-a7d87d332877_360x.png?v=1647426798",
+      "off": "  NEW-ARRIVAL",
+      "rating": " 5 star ",
+      "name": " Airdopes 411 ANC",
+      "price": 2299,
+      "stkPrice": 4990,
+      "category": "wireless earbuds"
+    }
+  ]
 }
